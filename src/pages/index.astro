@@ -1,11 +1,93 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// src/pages/index.astro
+// Hauptseite für den Cloud Identity Summit 2026
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cloud Identity Summit 2026 | Frankfurt am Main</title>
+    <meta name="description" content="Die führende Community-Konferenz für Cloud Identity, Security und Governance im deutschsprachigen Raum." />
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-sans antialiased selection:bg-blue-500/30">
+
+    <nav class="border-b border-slate-900 bg-slate-950/70 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2 font-bold tracking-tight text-lg">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">Cloud Identity</span> Summit
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
+                <a href="#about" class="hover:text-white transition">Über das Event</a>
+                <a href="#team" class="hover:text-white transition">Team</a>
+                <a href="https://cloudinspires.me" target="_blank" class="hover:text-white transition">Podcast</a>
+            </div>
+            <div>
+                <a href="#tickets" class="bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold px-4 py-2 rounded-lg transition shadow-lg shadow-blue-500/10">
+                    Tickets folgen
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative overflow-hidden pt-32 pb-24 px-6 border-b border-slate-900">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-500/10 blur-[120px] rounded-full pointer-events-none"></div>
+        
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <span class="inline-flex items-center gap-1.5 text-blue-400 font-mono text-xs font-semibold tracking-wider uppercase bg-blue-950/40 px-4 py-1.5 rounded-full border border-blue-900/40">
+                ⚡ Community Konferenz · Zero Trust & Identity
+            </span>
+            
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mt-6 mb-8 leading-[1.1]">
+                Identity. Security.<br />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-cyan-400 to-indigo-500">Enterprise Governance.</span>
+            </h1>
+            
+            <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
+                Nach dem Erfolg der letzten Jahre bringen wir die führenden Köpfe, Microsoft MVPs und Identity-Enthusiasten wieder zusammen. Ein Tag voller Deep-Dives, Networking und praxisnaher Security.
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-mono text-slate-300">
+                <div class="bg-slate-900/60 border border-slate-800/80 px-5 py-3 rounded-xl backdrop-blur flex items-center gap-2">
+                    <span>📅</span> <strong>3. November 2026</strong>
+                </div>
+                <div class="bg-slate-900/60 border border-slate-800/80 px-5 py-3 rounded-xl backdrop-blur flex items-center gap-2">
+                    <span>📍</span> <strong>Frankfurt am Main</strong>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="py-24 px-6 max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-slate-900/40 border border-slate-900 p-8 rounded-2xl">
+                <div class="text-blue-500 text-2xl mb-4">🛡️</div>
+                <h3 class="font-bold text-lg mb-2">Pure Focus</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Kein Marketing-Sprech. Nur knallharte technische Sessions zu Microsoft Entra, Purview, Zero Trust und dezentralen Identitäten.</p>
+            </div>
+            <div class="bg-slate-900/40 border border-slate-900 p-8 rounded-2xl">
+                <div class="text-cyan-400 text-2xl mb-4">👥</div>
+                <h3 class="font-bold text-lg mb-2">By the Community</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Organisiert von Community-Leads und MVPs für IT-Architekten, Security-Verantwortliche und Cloud-Consultants.</p>
+            </div>
+            <div class="bg-slate-900/40 border border-slate-900 p-8 rounded-2xl">
+                <div class="text-indigo-400 text-2xl mb-4">🌐</div>
+                <h3 class="font-bold text-lg mb-2">Networking</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Triff Gleichgesinnte im Herzen von Frankfurt, tausche dich in den Pausen aus und erweitere dein Experten-Netzwerk.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-slate-900 bg-slate-950 py-8 text-center text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-slate-400">
+            <div>&copy; 2026 Cloud Identity Summit. Alle Rechte vorbehalten.</div>
+            <div class="flex gap-6 text-slate-500 text-xs">
+                <a href="#" class="hover:text-slate-300 transition">Impressum</a>
+                <a href="#" class="hover:text-slate-300 transition">Datenschutz</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
