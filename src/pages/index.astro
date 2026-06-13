@@ -1,104 +1,166 @@
 ---
-// src/pages/index.astro
-// Hauptseite für den Cloud Identity Summit 2026
+// WICHTIG: Die globale Tailwind v4 Datei wird geladen
+import '../styles/global.css';
 ---
 
 <!DOCTYPE html>
-<html lang="de" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cloud Identity Summit 2026 | Frankfurt am Main</title>
-    <meta name="description" content="Die führende Community-Konferenz für Cloud Identity, Security und Governance im deutschsprachigen Raum." />
-    
-    <!-- Hier weisen wir Astro an, die installierte Tailwind-Konfiguration nativ einzubinden -->
-    <style is:global>
-        @tailwind base;
-        @tailwind components;
-        @tailwind utilities;
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Identity Summit 2026</title>
 </head>
-<body class="bg-slate-950 text-slate-100 min-h-screen font-sans antialiased selection:bg-blue-500/30">
+<body class="bg-slate-950 text-slate-200 font-sans antialiased min-h-screen flex flex-col">
 
-    <!-- Navigation -->
-    <nav class="border-b border-slate-900 bg-slate-950/70 backdrop-blur-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-            <div class="flex items-center gap-2 font-bold tracking-tight text-lg">
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">Cloud Identity</span> Summit
-            </div>
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
-                <a href="#about" class="hover:text-white transition">Über das Event</a>
-                <a href="#team" class="hover:text-white transition">Team</a>
-                <a href="https://cloudinspires.me" target="_blank" class="hover:text-white transition">Podcast</a>
-            </div>
-            <div>
-                <a href="#tickets" class="bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold px-4 py-2 rounded-lg transition shadow-lg shadow-blue-500/10">
-                    Tickets folgen
+    <nav class="sticky top-0 z-50 bg-slate-950/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-3">
+                    <span class="bg-blue-600 text-white text-xs font-bold px-2.5 py-1 rounded-md">CIS</span>
+                    <span class="font-bold text-white tracking-wide">Cloud Identity Summit</span>
                 </a>
+
+                <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="/" class="text-blue-400">2026</a>
+                    <a href="/archive" class="hover:text-white transition">Archive</a>
+                    <a href="/team" class="hover:text-white transition">Team</a>
+                    <a href="/sponsors" class="hover:text-white transition">Sponsors</a>
+                    <a href="/code-of-conduct" class="hover:text-white transition">CoC</a>
+                    <a href="/tickets" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg transition shadow-lg shadow-blue-900/20">🎟 Tickets</a>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="relative overflow-hidden pt-32 pb-24 px-6 border-b border-slate-900">
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-500/10 blur-[120px] rounded-full pointer-events-none"></div>
-        
-        <div class="max-w-4xl mx-auto text-center relative z-10">
-            <span class="inline-flex items-center gap-1.5 text-blue-400 font-mono text-xs font-semibold tracking-wider uppercase bg-blue-950/40 px-4 py-1.5 rounded-full border border-blue-900/40">
-                ⚡ Community Konferenz · Zero Trust & Identity
-            </span>
+    <section class="relative pt-24 pb-16 md:pt-32 md:pb-24 px-4 text-center overflow-hidden flex-grow">
+        <div class="absolute inset-0 bg-gradient-to-b from-blue-900/10 to-slate-950 pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <div class="text-blue-400 font-mono text-sm mb-6 tracking-wider uppercase">
+                Cloud Identity Summit 2026 · Frankfurt
+            </div>
             
-            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mt-6 mb-8 leading-[1.1]">
-                Identity. Security.<br />
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-cyan-400 to-indigo-500">Enterprise Governance.</span>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-tight mb-6">
+                Identity.<br/>
+                Security.<br/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">2026.</span>
             </h1>
             
-            <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
-                Nach dem Erfolg der letzten Jahre bringen wir die führenden Köpfe, Microsoft MVPs und Identity-Enthusiasten wieder zusammen. Ein Tag voller Deep-Dives, Networking und praxisnaher Security.
+            <p class="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
+                The community conference for cloud identity professionals.
             </p>
-            
-            <div class="flex flex-wrap justify-center gap-4 text-sm font-mono text-slate-300">
-                <div class="bg-slate-900/60 border border-slate-800/80 px-5 py-3 rounded-xl backdrop-blur flex items-center gap-2">
-                    <span>📅</span> <strong>3. November 2026</strong>
-                </div>
-                <div class="bg-slate-900/60 border border-slate-800/80 px-5 py-3 rounded-xl backdrop-blur flex items-center gap-2">
-                    <span>📍</span> <strong>Frankfurt am Main</strong>
-                </div>
-            </div>
-        </div>
-    </header>
 
-    <!-- Info Section -->
-    <section id="about" class="py-24 px-6 max-w-5xl mx-auto">
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-slate-900/40 border border-slate-900 p-8 rounded-2xl">
-                <div class="text-blue-500 text-2xl mb-4">🛡️</div>
-                <h3 class="font-bold text-lg mb-2">Pure Focus</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">Kein Marketing-Sprech. Nur knallharte technische Sessions zu Microsoft Entra, Purview, Zero Trust und dezentralen Identitäten.</p>
+            <div class="flex justify-center items-center gap-8 text-sm font-medium text-slate-300 mb-12">
+                <div class="flex flex-col items-center">
+                    <span class="text-slate-500 text-xs uppercase tracking-wider mb-1">Date</span>
+                    <span>TBD 2026</span>
+                </div>
+                <div class="w-px h-8 bg-slate-700"></div>
+                <div class="flex flex-col items-center">
+                    <span class="text-slate-500 text-xs uppercase tracking-wider mb-1">Location</span>
+                    <span>Frankfurt, Germany</span>
+                </div>
             </div>
-            <div class="bg-slate-900/40 border border-slate-900 p-8 rounded-2xl">
-                <div class="text-cyan-400 text-2xl mb-4">👥</div>
-                <h3 class="font-bold text-lg mb-2">By the Community</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">Organisiert von Community-Leads und MVPs für IT-Architekten, Security-Verantwortliche und Cloud-Consultants.</p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16">
+                <a href="/tickets" class="bg-blue-600 hover:bg-blue-500 text-white px-8 py-3.5 rounded-lg font-semibold transition">🎟 Get Tickets</a>
+                <a href="/agenda" class="bg-slate-900 border border-slate-700 hover:bg-slate-800 text-white px-8 py-3.5 rounded-lg font-semibold transition">View Agenda</a>
             </div>
-            <div class="bg-slate-900/40 border border-slate-900 p-8 rounded-2xl">
-                <div class="text-indigo-400 text-2xl mb-4">🌐</div>
-                <h3 class="font-bold text-lg mb-2">Networking</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">Triff Gleichgesinnte im Herzen von Frankfurt, tausche dich in den Pausen aus und erweitere dein Experten-Netzwerk.</p>
+
+            <div id="countdown" class="flex justify-center gap-4 text-center font-mono">
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 min-w-[90px]">
+                    <span id="cd-days" class="block text-3xl font-bold text-white mb-1">--</span>
+                    <span class="text-xs text-slate-500 uppercase tracking-wider">Days</span>
+                </div>
+                <div class="text-2xl font-bold text-slate-700 self-center">:</div>
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 min-w-[90px]">
+                    <span id="cd-hours" class="block text-3xl font-bold text-white mb-1">--</span>
+                    <span class="text-xs text-slate-500 uppercase tracking-wider">Hours</span>
+                </div>
+                <div class="text-2xl font-bold text-slate-700 self-center">:</div>
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 min-w-[90px]">
+                    <span id="cd-mins" class="block text-3xl font-bold text-white mb-1">--</span>
+                    <span class="text-xs text-slate-500 uppercase tracking-wider">Minutes</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="border-t border-slate-900 bg-slate-950 py-8 text-center text-xs text-slate-500">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-slate-400">
-            <div>&copy; 2026 Cloud Identity Summit. Alle Rechte vorbehalten.</div>
-            <div class="flex gap-6 text-slate-500 text-xs">
-                <a href="#" class="hover:text-slate-300 transition">Impressum</a>
-                <a href="#" class="hover:text-slate-300 transition">Datenschutz</a>
+    <main class="max-w-4xl mx-auto px-4 py-20 w-full border-t border-slate-900">
+        
+        <section class="mb-24">
+            <div class="text-blue-500 text-sm font-bold tracking-wider uppercase mb-3">About the Event</div>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-8">What is the Cloud Identity Summit?</h2>
+            
+            <div class="text-slate-300 text-lg leading-relaxed">
+                <p class="mb-6">
+                    The Cloud Identity Summit focuses on Cloud Identity Management — identity protection, managing external accounts, passwordless authentication and much more. It is a free community event that brings together an international group of participants from different areas and industries, with a focus on knowledge exchange.
+                </p>
+                <p class="mb-10">
+                    The Cloud Identity Summit 2026 will take place on <strong class="text-white font-semibold">3. November 2026</strong> in Frankfurt. We are looking for sponsors and partners who support us — without them, we would not be able to offer this conference for free.
+                </p>
+            </div>
+
+            <div class="flex flex-wrap gap-4">
+                <a href="/tickets" class="bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold transition">🎟 Get Tickets</a>
+                <a href="/sponsors/call-for-sponsors" class="bg-slate-800 border border-slate-700 hover:bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold transition">Become a Sponsor</a>
+            </div>
+        </section>
+
+        <section>
+            <div class="text-blue-500 text-sm font-bold tracking-wider uppercase mb-3">Archive</div>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-8">Past Events</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {['2025', '2024', '2023', '2022', '2021', '2020'].map((year) => (
+                    <a href={`/archive/${year}`} class="bg-slate-900/50 border border-slate-800 hover:border-slate-600 hover:bg-slate-800 rounded-xl p-6 flex justify-between items-center transition group">
+                        <span class="text-xl font-bold text-slate-400 group-hover:text-white transition">{year}</span>
+                        <span class="text-slate-600 group-hover:text-blue-400 transition">→</span>
+                    </a>
+                ))}
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-slate-900 bg-slate-950 py-10 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-slate-500">
+            <span>© 2026 Cloud Identity Summit</span>
+            <div class="flex gap-8">
+                <a href="/impressum" class="hover:text-slate-300 transition">Impressum</a>
+                <a href="/datenschutz" class="hover:text-slate-300 transition">Datenschutz</a>
+                <a href="/code-of-conduct" class="hover:text-slate-300 transition">Code of Conduct</a>
             </div>
         </div>
     </footer>
 
+    <script>
+        (function(){
+            const eventDate = "2026-11-03";
+            function updateCountdown() {
+                const target = new Date(eventDate).getTime();
+                const now = Date.now();
+                const diff = target - now;
+                
+                if (diff <= 0) {
+                    const el = document.getElementById('countdown');
+                    if(el) el.remove();
+                    return;
+                }
+                const days  = Math.floor(diff / 86400000);
+                const hours = Math.floor((diff % 86400000) / 3600000);
+                const mins  = Math.floor((diff % 3600000) / 60000);
+                
+                const dEl = document.getElementById('cd-days');
+                const hEl = document.getElementById('cd-hours');
+                const mEl = document.getElementById('cd-mins');
+                
+                if(dEl) dEl.textContent  = String(days).padStart(2, '0');
+                if(hEl) hEl.textContent = String(hours).padStart(2, '0');
+                if(mEl) mEl.textContent  = String(mins).padStart(2, '0');
+            }
+            updateCountdown();
+            setInterval(updateCountdown, 60000);
+        })();
+    </script>
 </body>
 </html>
