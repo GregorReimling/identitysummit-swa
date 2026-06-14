@@ -13,7 +13,7 @@ const { title = "Cloud Identity Summit 2026" } = Astro.props;
 </head>
 <body class="bg-slate-950 text-slate-200 font-sans antialiased min-h-screen flex flex-col">
 
-    <nav class="sticky top-0 z-50 bg-slate-950/90 backdrop-blur-md border-b border-slate-800">
+<nav class="sticky top-0 z-50 bg-slate-950/90 backdrop-blur-md border-b border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="flex items-center justify-between h-16">
                 <a href="/" class="flex items-center gap-3">
@@ -22,11 +22,11 @@ const { title = "Cloud Identity Summit 2026" } = Astro.props;
                 </a>
 
                 <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
-                    <a href="/" class="hover:text-white transition">2026</a>
-                    <a href="/archive" class="hover:text-white transition">Archive</a>
-                    <a href="/team" class="hover:text-white transition">Team</a>
-                    <a href="/sponsors" class="hover:text-white transition">Sponsors</a>
-                    <a href="/code-of-conduct" class="hover:text-white transition">CoC</a>
+                    <a href="/" class={currentPath === '/' ? "text-blue-400" : "text-slate-300 hover:text-white transition"}>2026</a>
+                    <a href="/archive" class={currentPath.startsWith('/archive') ? "text-blue-400" : "text-slate-300 hover:text-white transition"}>Archive</a>
+                    <a href="/team" class={currentPath === '/team' ? "text-blue-400" : "text-slate-300 hover:text-white transition"}>Team</a>
+                    <a href="/sponsors" class={currentPath === '/sponsors' ? "text-blue-400" : "text-slate-300 hover:text-white transition"}>Sponsors</a>
+                    <a href="/code-of-conduct" class={currentPath === '/code-of-conduct' ? "text-blue-400" : "text-slate-300 hover:text-white transition"}>CoC</a>
                     <a href="/tickets" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg transition shadow-lg shadow-blue-900/20">🎟 Tickets</a>
                 </div>
             </div>
