@@ -1,0 +1,74 @@
+---
+// src/pages/archive/[year].astro
+import Layout from '../../layouts/Layout.astro';
+
+// Hier definieren wir alle Jahre und ihre entsprechenden Sessionize-IDs
+export function getStaticPaths() {
+    return [
+        { params: { year: '2025' }, props: { title: 'Cloud Identity Summit 2025', speakerId: '0d18vdnf', agendaId: '0d18vdnf' } },
+        { params: { year: '2024' }, props: { title: 'Cloud Identity Summit 2024', speakerId: '0d18vdnf', agendaId: 'glp2606c' } },
+        { params: { year: '2023' }, props: { title: 'Cloud Identity Summit 2023', speakerId: '4bxdehxn', agendaId: '4bxdehxn' } },
+        { params: { year: '2022' }, props: { title: 'Cloud Identity Summit 2022', speakerId: 'zbnpdr6g', agendaId: 'zbnpdr6g' } },
+        { params: { year: '2021' }, props: { title: 'Cloud Identity Summit 2021', speakerId: 'ass0dul1', agendaId: '0ba32bva' } },
+        // 2020 hatte noch kein Sessionize
+        { params: { year: '2020' }, props: { title: 'Cloud Identity Summit 2020', speakerId: null, agendaId: null } }
+    ];
+}
+
+const { year } = Astro.params;
+const { title, speakerId, agendaId } = Astro.props;
+---
+
+<Layout title={`${title} | Cloud Identity Summit`}>
+    <main class="max-w-6xl mx-auto px-4 py-20 w-full flex-grow">
+        
+        <div class="mb-12">
+            <a href="/archive" class="inline-flex items-center gap-2 text-blue-500 hover:text-blue-400 text-sm font-semibold transition bg-slate-900/50 border border-slate-800 px-4 py-2 rounded-lg">
+                ← Back to Archive
+            </a>
+        </div>
+
+        <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-16 border-b border-slate-800 pb-6">
+            {title}
+        </h1>
+
+        {speakerId ? (
+            <section class="mb-24">
+                <div class="text-blue-500 text-sm font-bold tracking-wider uppercase mb-3">Experts</div>
+                <h2 class="text-3xl font-bold text-white mb-8">Speakers</h2>
+                
+                <div class="bg-slate-900/40 border border-slate-800 rounded-2xl p-4 md:p-8">
+                    <script type="text/javascript" src={`https://sessionize.com/api/v2/${speakerId}/view/Speakers`} is:inline></script>
+                </div>
+            </section>
+        ) : (
+            year === '2020' && (
+                <div class="bg-slate-900/40 border border-slate-800 rounded-2xl p-8 mb-24">
+                    <p class="text-slate-400">The speaker data for 2020 was not captured via Sessionize. Historical data will be added manually.</p>
+                </div>
+            )
+        )}
+
+        {agendaId && (
+            <section class="mb-20">
+                <div class="text-blue-500 text-sm font-bold tracking-wider uppercase mb-3">Schedule</div>
+                <h2 class="text-3xl font-bold text-white mb-8">Agenda</h2>
+                
+                <div class="bg-slate-900/40 border border-slate-800 rounded-2xl p-4 md:p-8 overflow-x-auto">
+                    <script type="text/javascript" src={`https://sessionize.com/api/v2/${agendaId}/view/GridSmart`} is:inline></script>
+                </div>
+            </section>
+        )}
+        
+    </main>
+</Layout>
+
+<style is:global>
+    /* Anpassungen für die Sessionize Grids */
+    .sz-speaker__name { color: #fff !important; }
+    .sz-speaker__tagline { color: #94a3b8 !important; }
+    .sz-session__title { color: #fff !important; font-weight: bold !important; }
+    .sz-session__room { color: #3b82f6 !important; }
+    .sz-day__title { color: #fff !important; border-bottom: 1px solid #1e293b !important; }
+    .sz-time { color: #94a3b8 !important; }
+</style>
