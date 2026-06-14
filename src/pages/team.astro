@@ -1,4 +1,5 @@
 ---
+// src/pages/team.astro
 import '../styles/global.css';
 ---
 
@@ -11,17 +12,23 @@ import '../styles/global.css';
 </head>
 <body class="bg-slate-950 text-slate-200 font-sans antialiased min-h-screen flex flex-col">
 
-    <!-- Navigation (Kompakt) -->
+    <!-- Einheitliche Navigation -->
     <nav class="sticky top-0 z-50 bg-slate-950/90 backdrop-blur-md border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
-            <a href="/" class="flex items-center gap-3">
-                <span class="bg-blue-600 text-white text-xs font-bold px-2.5 py-1 rounded-md">CIS</span>
-                <span class="font-bold text-white tracking-wide">Cloud Identity Summit</span>
-            </a>
-            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
-                <a href="/" class="hover:text-white transition">2026</a>
-                <a href="/team" class="text-blue-400">Team</a>
-                <a href="/sponsors" class="hover:text-white transition">Sponsors</a>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-3">
+                    <span class="bg-blue-600 text-white text-xs font-bold px-2.5 py-1 rounded-md">CIS</span>
+                    <span class="font-bold text-white tracking-wide">Cloud Identity Summit</span>
+                </a>
+
+                <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="/" class="hover:text-white transition">2026</a>
+                    <a href="/archive" class="hover:text-white transition">Archive</a>
+                    <a href="/team" class="text-blue-400">Team</a>
+                    <a href="/sponsors" class="hover:text-white transition">Sponsors</a>
+                    <a href="/code-of-conduct" class="hover:text-white transition">CoC</a>
+                    <a href="/tickets" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg transition shadow-lg shadow-blue-900/20">🎟 Tickets</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -35,7 +42,6 @@ import '../styles/global.css';
         </p>
 
         <div class="grid md:grid-cols-3 gap-8">
-            <!-- Thomas Naunheim -->
             <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6">
                 <h3 class="text-xl font-bold text-white mb-2"><a href="https://www.cloud-architekt.net/" target="_blank" class="hover:text-blue-400 transition">Thomas Naunheim</a></h3>
                 <p class="text-slate-400 text-sm leading-relaxed">
@@ -43,7 +49,6 @@ import '../styles/global.css';
                 </p>
             </div>
 
-            <!-- René Wasel -->
             <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6">
                 <h3 class="text-xl font-bold text-white mb-2"><a href="https://twitter.com/renedelamotte" target="_blank" class="hover:text-blue-400 transition">René Wasel</a></h3>
                 <p class="text-slate-400 text-sm leading-relaxed">
@@ -51,7 +56,6 @@ import '../styles/global.css';
                 </p>
             </div>
 
-            <!-- Gregor Reimling -->
             <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6">
                 <h3 class="text-xl font-bold text-white mb-2"><a href="https://www.reimling.eu" target="_blank" class="hover:text-blue-400 transition">Gregor Reimling</a></h3>
                 <p class="text-slate-400 text-sm leading-relaxed">
@@ -62,8 +66,13 @@ import '../styles/global.css';
     </main>
 
     <footer class="border-t border-slate-900 bg-slate-950 py-10 mt-auto">
-        <div class="max-w-7xl mx-auto px-4 text-center text-sm text-slate-500">
-            © 2026 Cloud Identity Summit
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-slate-500">
+            <span>© 2026 Cloud Identity Summit</span>
+            <div class="flex gap-8">
+                <a href="/impressum" class="hover:text-slate-300 transition">Impressum</a>
+                <a href="/datenschutz" class="hover:text-slate-300 transition">Datenschutz</a>
+                <a href="/code-of-conduct" class="hover:text-slate-300 transition">Code of Conduct</a>
+            </div>
         </div>
     </footer>
 </body>

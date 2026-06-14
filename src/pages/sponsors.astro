@@ -1,4 +1,5 @@
 ---
+// src/pages/sponsors.astro
 import '../styles/global.css';
 ---
 
@@ -11,16 +12,23 @@ import '../styles/global.css';
 </head>
 <body class="bg-slate-950 text-slate-200 font-sans antialiased min-h-screen flex flex-col">
 
+    <!-- Einheitliche Navigation -->
     <nav class="sticky top-0 z-50 bg-slate-950/90 backdrop-blur-md border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
-            <a href="/" class="flex items-center gap-3">
-                <span class="bg-blue-600 text-white text-xs font-bold px-2.5 py-1 rounded-md">CIS</span>
-                <span class="font-bold text-white tracking-wide">Cloud Identity Summit</span>
-            </a>
-            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
-                <a href="/" class="hover:text-white transition">2026</a>
-                <a href="/team" class="hover:text-white transition">Team</a>
-                <a href="/sponsors" class="text-blue-400">Sponsors</a>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center gap-3">
+                    <span class="bg-blue-600 text-white text-xs font-bold px-2.5 py-1 rounded-md">CIS</span>
+                    <span class="font-bold text-white tracking-wide">Cloud Identity Summit</span>
+                </a>
+
+                <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="/" class="hover:text-white transition">2026</a>
+                    <a href="/archive" class="hover:text-white transition">Archive</a>
+                    <a href="/team" class="hover:text-white transition">Team</a>
+                    <a href="/sponsors" class="text-blue-400">Sponsors</a>
+                    <a href="/code-of-conduct" class="hover:text-white transition">CoC</a>
+                    <a href="/tickets" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg transition shadow-lg shadow-blue-900/20">🎟 Tickets</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -34,20 +42,20 @@ import '../styles/global.css';
             <h2 class="text-3xl font-bold text-yellow-500 mb-8 border-b border-slate-800 pb-4">Gold Sponsors</h2>
             <div class="space-y-12">
                 <div>
-                    <h3 class="text-2xl font-bold text-white mb-3">adesso SE</h3>
+                    <h3 class="text-2xl font-bold text-white mb-3"><a href="https://www.adesso.de/en" target="_blank" class="hover:text-blue-400 transition">adesso SE</a></h3>
                     <p class="text-slate-400 leading-relaxed">Business success is the result of innovative ideas, forward-looking strategies and perfectly tailored IT solutions. With a team of around 6.300 employees on 56 sites, we are one of the leading IT service providers in the German-speaking area.</p>
                 </div>
                 <div>
-                    <h3 class="text-2xl font-bold text-white mb-3">E.ON Digital Technology GmbH</h3>
-                    <p class="text-slate-400 leading-relaxed">E.ON leads the way and takes responsibility. Our mission is nothing less than to be the playmaker of the energy transition in Germany and to make it feasible for everyone.</p>
-                </div>
-                <div>
-                    <h3 class="text-2xl font-bold text-white mb-3">glueckkanja AG</h3>
+                    <h3 class="text-2xl font-bold text-white mb-3"><a href="https://www.glueckkanja.com/en" target="_blank" class="hover:text-blue-400 transition">glueckkanja AG</a></h3>
                     <p class="text-slate-400 leading-relaxed">glueckkanja, a renowned Cloud Managed Service Provider, is a Microsoft partner offering comprehensive cloud solutions. With a unified blueprint approach, glueckkanja uses Infrastructure as Code to transition and support customer infrastructures.</p>
                 </div>
                 <div>
-                    <h3 class="text-2xl font-bold text-white mb-3">TOKEN2</h3>
+                    <h3 class="text-2xl font-bold text-white mb-3"><a href="https://www.token2.com/" target="_blank" class="hover:text-blue-400 transition">TOKEN2</a></h3>
                     <p class="text-slate-400 leading-relaxed">Token2 is a cybersecurity company specializing in multifactor authentication. Alongside legacy OTP-based hardware tokens and standard FIDO2 keys, Token2 offers the innovative PIN+ series.</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-3"><a href="https://tenantmanager.com/" target="_blank" class="hover:text-blue-400 transition">SoftwareCentral | Tenant Manager</a></h3>
+                    <p class="text-slate-400 leading-relaxed">SoftwareCentral’s Tenant Manager enhances Microsoft Intune with enterprise-grade governance, automates change controls, and delivers granular oversight across multi-tenant environments.</p>
                 </div>
             </div>
         </section>
@@ -56,13 +64,9 @@ import '../styles/global.css';
         <section class="mb-20">
             <h2 class="text-3xl font-bold text-slate-300 mb-8 border-b border-slate-800 pb-4">Silver Sponsors</h2>
             <div class="space-y-12">
-                <div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Omada GmbH</h3>
-                    <p class="text-slate-400 leading-relaxed">Omada Identity Cloud is a next-generation IGA-as-a-service platform designed to deliver complete visibility and control over your identity landscape.</p>
-                </div>
-                <div>
-                    <h3 class="text-2xl font-bold text-white mb-3">SoftwareCentral | Tenant Manager</h3>
-                    <p class="text-slate-400 leading-relaxed">SoftwareCentral’s Tenant Manager enhances Microsoft Intune with enterprise-grade governance, automates change controls, and delivers granular oversight across multi-tenant environments.</p>
+                <div class="bg-slate-900/40 border border-slate-800 p-6 rounded-xl text-center">
+                    <p class="text-slate-500 italic">No Silver Sponsors yet.</p>
+                    <a href="/call-for-sponsors" class="text-blue-500 hover:text-blue-400 text-sm font-semibold mt-2 inline-block">Become a sponsor →</a>
                 </div>
             </div>
         </section>
@@ -72,14 +76,6 @@ import '../styles/global.css';
             <h2 class="text-3xl font-bold text-amber-600 mb-8 border-b border-slate-800 pb-4">Bronze Sponsors</h2>
             <div class="space-y-12">
                 <div>
-                    <h3 class="text-2xl font-bold text-white mb-3">MSC - CyberGuard GmbH</h3>
-                    <p class="text-slate-400 leading-relaxed">As a trusted partner in the field of information security, we are committed to providing companies with comprehensive support and protection.</p>
-                </div>
-                <div>
-                    <h3 class="text-2xl font-bold text-white mb-3">water IT Security GmbH</h3>
-                    <p class="text-slate-400 leading-relaxed">water is a cybersecurity company delivering holistic IT security to protect your business. We help you defend against evolving threats through expert consulting and 24/7 monitoring.</p>
-                </div>
-                <div>
                     <h3 class="text-2xl font-bold text-white mb-3">BuildClouds</h3>
                 </div>
             </div>
@@ -87,8 +83,13 @@ import '../styles/global.css';
     </main>
 
     <footer class="border-t border-slate-900 bg-slate-950 py-10 mt-auto">
-        <div class="max-w-7xl mx-auto px-4 text-center text-sm text-slate-500">
-            © 2026 Cloud Identity Summit
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-slate-500">
+            <span>© 2026 Cloud Identity Summit</span>
+            <div class="flex gap-8">
+                <a href="/impressum" class="hover:text-slate-300 transition">Impressum</a>
+                <a href="/datenschutz" class="hover:text-slate-300 transition">Datenschutz</a>
+                <a href="/code-of-conduct" class="hover:text-slate-300 transition">Code of Conduct</a>
+            </div>
         </div>
     </footer>
 </body>
