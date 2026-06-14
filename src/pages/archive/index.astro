@@ -1,0 +1,18 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout title="Archive | Cloud Identity Summit">
+    <main class="max-w-4xl mx-auto px-4 py-20 w-full flex-grow">
+        <div class="text-blue-500 text-sm font-bold tracking-wider uppercase mb-3">Past Events</div>
+        <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-16">Archive</h1>
+        
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+            {['2025', '2024', '2023', '2022', '2021', '2020'].map((year) => (
+                <a href={`/archive/${year}`} class="bg-slate-900/50 border border-slate-800 hover:border-slate-600 hover:bg-slate-800 rounded-xl p-8 flex justify-between items-center transition group">
+                    <span class="text-2xl font-bold text-slate-400 group-hover:text-white transition">{year}</span>
+                    <span class="text-slate-600 group-hover:text-blue-400 transition">→</span>
+                </a>
+            ))}
+        </div>
+    </main>
+</Layout>

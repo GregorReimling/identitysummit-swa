@@ -59,7 +59,7 @@ import '../styles/global.css';
             <div class="flex justify-center items-center gap-8 text-sm font-medium text-slate-300 mb-12">
                 <div class="flex flex-col items-center">
                     <span class="text-slate-400 text-xs uppercase tracking-wider mb-1">Date</span>
-                    <span class="text-white">TBD 2026</span>
+                    <span class="text-white">November 3, 2026</span>
                 </div>
                 <div class="w-px h-8 bg-slate-700"></div>
                 <div class="flex flex-col items-center">
@@ -144,7 +144,10 @@ import '../styles/global.css';
     </footer>
 
     <!-- Countdown Script -->
-    <script>
+    <script is:inline>
+        (function(){
+            const eventDate = "2026-11-03T09:00:00";
+// ... (Rest bleibt gleich)>
         (function(){
             const eventDate = "2026-11-03";
             function updateCountdown() {
