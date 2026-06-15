@@ -1,0 +1,88 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const imgBase = "https://identitysummitfiles.blob.core.windows.net/cis-images";
+---
+
+<Layout title="Cloud Identity Summit 2021">
+    <main class="max-w-5xl mx-auto px-4 py-20 w-full flex-grow">
+        
+        <div class="mb-12">
+            <a href="/archive" class="inline-flex items-center gap-2 text-blue-500 hover:text-blue-400 text-sm font-semibold transition bg-slate-900/50 border border-slate-800 px-4 py-2 rounded-lg">
+                ← Back to Archive
+            </a>
+        </div>
+
+        <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-8">
+            Cloud Identity Summit 2021
+        </h1>
+
+        <div class="text-slate-300 text-lg leading-relaxed mb-16 space-y-6">
+            <p>The second Cloud Identity Summit took place on September 10, 2021 as a virtual conference. In 2021 we had a large number of speaker applications and it was very difficult for us to choose. Here again a big thank you to all speakers!</p>
+            <p>With 10 sessions spread over two tracks, we were able to increase our offer compared to the last event. We would like to thank our speakers for the top-class sessions in the field of Cloud Identity and Cloud Security! The feedback from the participants showed that the exchange of information was an enrichment for everyone involved.</p>
+            <p>We had a total of 250 participants, with up to 180 concurrent participants in the sessions. About 70% of the participants came from Europe, 20% from the USA and the rest from the rest of the world. We are very proud to be able to reach people all over the world.</p>
+        </div>
+
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold text-white mb-8 border-b border-slate-800 pb-4">Agenda & Speakers</h2>
+            
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition">
+                    <span class="text-blue-400 text-sm font-mono block mb-2">3:00 pm (50 min)</span>
+                    <strong class="text-white block mb-1 text-lg">Conditional Access & App Controls</strong>
+                    <span class="text-slate-400">Nicki Borell</span>
+                </div>
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition">
+                    <span class="text-blue-400 text-sm font-mono block mb-2">3:00 pm (50 min)</span>
+                    <strong class="text-white block mb-1 text-lg">TPMs and Certificate-based IoT Device Authentication</strong>
+                    <span class="text-slate-400">Paul Griffiths</span>
+                </div>
+
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition">
+                    <span class="text-blue-400 text-sm font-mono block mb-2">4:00 pm (50 min)</span>
+                    <strong class="text-white block mb-1 text-lg">From On-Prem to the Cloud. Hybrid AD attack path</strong>
+                    <span class="text-slate-400">Sergey Chubarov</span>
+                </div>
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition">
+                    <span class="text-blue-400 text-sm font-mono block mb-2">4:00 pm (50 min)</span>
+                    <strong class="text-white block mb-1 text-lg">Error-free with hybrid synchronization</strong>
+                    <span class="text-slate-400">Klaus Bierschenk</span>
+                </div>
+
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition">
+                    <span class="text-blue-400 text-sm font-mono block mb-2">5:00 pm (50 min)</span>
+                    <strong class="text-white block mb-1 text-lg">Use Azure AD and Microsoft Cloud App Security to protect your Cloud Apps</strong>
+                    <span class="text-slate-400">Christopher Brumm</span>
+                </div>
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition">
+                    <span class="text-blue-400 text-sm font-mono block mb-2">5:00 pm (50 min)</span>
+                    <strong class="text-white block mb-1 text-lg">Service Principals, App Registrations and other Azure Myths</strong>
+                    <span class="text-slate-400">Eric Berg</span>
+                </div>
+
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition">
+                    <span class="text-blue-400 text-sm font-mono block mb-2">6:00 pm (50 min)</span>
+                    <strong class="text-white block mb-1 text-lg">Microsoft Zero Trust security model – silver bullet or just another chase for the unicorn?</strong>
+                    <span class="text-slate-400">Nestori Syynimaa</span>
+                </div>
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition">
+                    <span class="text-blue-400 text-sm font-mono block mb-2">6:00 pm (50 min)</span>
+                    <strong class="text-white block mb-1 text-lg">From the trenches: Eight common mistakes with Hybrid Identity</strong>
+                    <span class="text-slate-400">Sander Berkouwer</span>
+                </div>
+
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition">
+                    <span class="text-blue-400 text-sm font-mono block mb-2">7:00 pm (50 min)</span>
+                    <strong class="text-white block mb-1 text-lg">Azure AD Applications Management: Heated Debate over Business Productivity and Cybersecurity</strong>
+                    <span class="text-slate-400">Dmitry Kulko, Keith Petty, Pinki Patel</span>
+                </div>
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition">
+                    <span class="text-blue-400 text-sm font-mono block mb-2">7:00 pm (50 min)</span>
+                    <strong class="text-white block mb-1 text-lg">AuthN vs. AuthZ - What happens in Azure AD when I try to access an app?</strong>
+                    <span class="text-slate-400">Peter Lenzke</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Falls du später noch 2021 Bilder im Azure Storage hast, kannst du sie hier analog zu 2022 einfügen -->
+    </main>
+</Layout>

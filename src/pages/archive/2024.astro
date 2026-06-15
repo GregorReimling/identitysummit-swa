@@ -1,0 +1,121 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const imgBase = "https://identitysummitfiles.blob.core.windows.net/cis-images";
+---
+
+<Layout title="Cloud Identity Summit 2024">
+    <main class="max-w-5xl mx-auto px-4 py-20 w-full flex-grow">
+        
+        <div class="mb-12">
+            <a href="/archive" class="inline-flex items-center gap-2 text-blue-500 hover:text-blue-400 text-sm font-semibold transition bg-slate-900/50 border border-slate-800 px-4 py-2 rounded-lg">
+                ← Back to Archive
+            </a>
+        </div>
+
+        <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-8">
+            Cloud Identity Summit 2024
+        </h1>
+
+        <div class="text-slate-300 text-lg leading-relaxed mb-16 space-y-6">
+            <p>The fifth Cloud Identity Summit took place on September 5, 2024. Building on the success of our first hybrid event last year, we continued with this format, offering the conference free of charge. We were thrilled to host the event at the Microsoft Office in Cologne, near the Rhine, thanks to the support of Microsoft.</p>
+            <p>Our list of sponsors has grown, and we are grateful to adesso SE, glueckkanja, e-on, Microsoft, and Teal Consulting for their support as Gold sponsors. Their contributions made it possible to offer this conference at no cost to participants.</p>
+            <p>This year's keynote was delivered by Merill Fernando, Microsoft PM for Entra, who provided an exciting and insightful presentation. We made some changes to the conference format, offering ten sessions across two parallel tracks, both on-site and streamed to participants worldwide. The event concluded with a roundtable discussion featuring all our experts.</p>
+        </div>
+
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold text-white mb-8 border-b border-slate-800 pb-4">Agenda & Speakers</h2>
+            
+            <!-- Keynote is full width -->
+            <div class="bg-slate-800/80 p-6 rounded-xl border border-blue-500/30 hover:border-blue-500/60 transition mb-4 shadow-lg shadow-blue-900/10">
+                <span class="text-blue-400 text-sm font-mono block mb-2">9:15 am (30 min)</span>
+                <strong class="text-white block mb-1 text-xl">Keynote - "Tokens, Tokens, Tokens - The Entra Story"</strong>
+                <span class="text-slate-300">Merill Fernando, Tarek Dawoud</span>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition">
+                    <span class="text-blue-400 text-sm font-mono block mb-2">9:50 am (50 min)</span>
+                    <strong class="text-white block mb-1 text-lg">Enrich Your Security with Automated Conditional Access Testing</strong>
+                    <span class="text-slate-400">Kenneth van Surksum, Sander Rozemuller</span>
+                </div>
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition">
+                    <span class="text-blue-400 text-sm font-mono block mb-2">9:50 am (50 min)</span>
+                    <strong class="text-white block mb-1 text-lg">The Microsoft Cloud Identity Crisis</strong>
+                    <span class="text-slate-400">Guido Grillenmeier</span>
+                </div>
+
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition">
+                    <span class="text-blue-400 text-sm font-mono block mb-2">11:00 am (50 min)</span>
+                    <strong class="text-white block mb-1 text-lg">1st AID for EID - how to prevent lateral movement to Entra ID when your Active Directory has fallen</strong>
+                    <span class="text-slate-400">Christopher Brumm</span>
+                </div>
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition">
+                    <span class="text-blue-400 text-sm font-mono block mb-2">11:00 am (50 min)</span>
+                    <strong class="text-white block mb-1 text-lg">When DevOps Meets Identity: A Reality Check</strong>
+                    <span class="text-slate-400">Eric Berg</span>
+                </div>
+
+                <!-- Sponsor Sessions -->
+                <div class="bg-slate-950 p-5 rounded-xl border border-yellow-600/30">
+                    <span class="text-yellow-500 text-sm font-mono block mb-2">11:55 am (20 min)</span>
+                    <strong class="text-slate-200 block mb-1 text-lg">Terraform Provider for Microsoft 365</strong>
+                    <span class="text-slate-500">glueckkanja AG</span>
+                </div>
+                <div class="bg-slate-950 p-5 rounded-xl border border-yellow-600/30">
+                    <span class="text-yellow-500 text-sm font-mono block mb-2">11:55 am (20 min)</span>
+                    <strong class="text-slate-200 block mb-1 text-lg">High Risk at its Core? Adaptive Access Management and Anomaly Detection in Hybrid IT</strong>
+                    <span class="text-slate-500">adesso SE</span>
+                </div>
+                
+                <div class="bg-slate-950 p-5 rounded-xl border border-yellow-600/30">
+                    <span class="text-yellow-500 text-sm font-mono block mb-2">12:20 pm (20 min)</span>
+                    <strong class="text-slate-200 block mb-1 text-lg">S/MIME and Intune MDM: A Vogon Poetry of E-Mail encryption</strong>
+                    <span class="text-slate-500">E.ON Digital Technology GmbH</span>
+                </div>
+                <div class="bg-slate-950 p-5 rounded-xl border border-yellow-600/30">
+                    <span class="text-yellow-500 text-sm font-mono block mb-2">12:20 pm (20 min)</span>
+                    <strong class="text-slate-200 block mb-1 text-lg">Entra ID - Why Governance Audits Are Essential Alongside Technical sec checks</strong>
+                    <span class="text-slate-500">Teal Technology</span>
+                </div>
+
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition">
+                    <span class="text-blue-400 text-sm font-mono block mb-2">1:45 pm (50 min)</span>
+                    <strong class="text-white block mb-1 text-lg">Navigating Identity Chaos: A Technical Deep Dive into multi-cloud Least Privilege Access with Microsoft</strong>
+                    <span class="text-slate-400">Anton Staykov</span>
+                </div>
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition">
+                    <span class="text-blue-400 text-sm font-mono block mb-2">1:45 pm (50 min)</span>
+                    <strong class="text-white block mb-1 text-lg">Challenge accepted – how to deal with guest users in Power Platform</strong>
+                    <span class="text-slate-400">Nicki Borell, Luise Freese</span>
+                </div>
+
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition">
+                    <span class="text-blue-400 text-sm font-mono block mb-2">2:45 pm (50 min)</span>
+                    <strong class="text-white block mb-1 text-lg">The End of Passwords: An Introduction to Passkeys in Entra ID</strong>
+                    <span class="text-slate-400">Fabian Bader, Christopher Brumm</span>
+                </div>
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition">
+                    <span class="text-blue-400 text-sm font-mono block mb-2">2:45 pm (50 min)</span>
+                    <strong class="text-white block mb-1 text-lg">Death by a thousand control planes: The reality of privileged access in the cloud</strong>
+                    <span class="text-slate-400">Eric Woodruff</span>
+                </div>
+
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition">
+                    <span class="text-blue-400 text-sm font-mono block mb-2">3:55 pm (50 min)</span>
+                    <strong class="text-white block mb-1 text-lg">Zero-Trust Network Access to any legacy resource with the Power of Entra Private Access!</strong>
+                    <span class="text-slate-400">Pim Jacobs, Ronny de Jong</span>
+                </div>
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition">
+                    <span class="text-blue-400 text-sm font-mono block mb-2">3:55 pm (50 min)</span>
+                    <strong class="text-white block mb-1 text-lg">Automate IAM and IGA with Microsoft Entra ID Governance - While I enjoy my Kölsch</strong>
+                    <span class="text-slate-400">Jan Vidar Elven</span>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-6 border-t border-slate-800 text-right text-xs text-slate-500">
+                Urheber der Fotos (sofern hier abgebildet): Paulin Berg (Lichtbild-Berg)<br/>
+                Der Verkauf der Fotos ist nicht gestattet. Die sonstige Nutzung der Fotos ist mit Nennung des Urhebers gestattet. Die Bearbeitung der Fotos bedarf der Einwilligung des Urhebers.
+            </div>
+        </section>
+    </main>
+</Layout>
