@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Cloud Identity Summit 2026">
+    <!-- HERO BEREICH START -->
     <section class="relative pt-24 pb-16 md:pt-32 md:pb-24 px-4 text-center flex-grow bg-cover bg-center" style="background-image: url('/images/frankfurt-skyline.jpg');">
         
         <div class="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-slate-950/70 to-slate-950"></div>
@@ -57,6 +58,37 @@ import Layout from '../layouts/Layout.astro';
             </div>
         </div>
     </section>
+    <!-- HERO BEREICH ENDE -->
+
+
+    <!-- NEU: SPONSOREN TICKER START -->
+    <section class="py-12 border-y border-slate-800/50 bg-slate-900/20 overflow-hidden relative">
+        <div class="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-slate-950 to-transparent z-10 pointer-events-none"></div>
+        <div class="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-slate-950 to-transparent z-10 pointer-events-none"></div>
+        
+        <p class="text-center text-slate-500 text-sm font-semibold uppercase tracking-widest mb-8">
+            Trusted by industry leaders in previous years
+        </p>
+
+        <div class="flex w-[200%] animate-scroll hover:[animation-play-state:paused] items-center">
+            <div class="flex w-1/2 justify-around items-center px-4">
+                <span class="text-2xl font-bold text-slate-400 opacity-50 hover:opacity-100 hover:text-white transition-all cursor-default">adesso SE</span>
+                <span class="text-2xl font-bold text-slate-400 opacity-50 hover:opacity-100 hover:text-white transition-all cursor-default">glueckkanja</span>
+                <span class="text-2xl font-bold text-slate-400 opacity-50 hover:opacity-100 hover:text-white transition-all cursor-default">Yubico</span>
+                <span class="text-2xl font-bold text-slate-400 opacity-50 hover:opacity-100 hover:text-white transition-all cursor-default">Microsoft</span>
+                <span class="text-2xl font-bold text-slate-400 opacity-50 hover:opacity-100 hover:text-white transition-all cursor-default">Skill AS</span>
+            </div>
+            <div class="flex w-1/2 justify-around items-center px-4">
+                <span class="text-2xl font-bold text-slate-400 opacity-50 hover:opacity-100 hover:text-white transition-all cursor-default">adesso SE</span>
+                <span class="text-2xl font-bold text-slate-400 opacity-50 hover:opacity-100 hover:text-white transition-all cursor-default">glueckkanja</span>
+                <span class="text-2xl font-bold text-slate-400 opacity-50 hover:opacity-100 hover:text-white transition-all cursor-default">Yubico</span>
+                <span class="text-2xl font-bold text-slate-400 opacity-50 hover:opacity-100 hover:text-white transition-all cursor-default">Microsoft</span>
+                <span class="text-2xl font-bold text-slate-400 opacity-50 hover:opacity-100 hover:text-white transition-all cursor-default">Skill AS</span>
+            </div>
+        </div>
+    </section>
+    <!-- NEU: SPONSOREN TICKER ENDE -->
+
 
     <main class="max-w-4xl mx-auto px-4 py-20 w-full">
         <section class="mb-24">
@@ -74,7 +106,7 @@ import Layout from '../layouts/Layout.astro';
 
             <div class="flex flex-wrap gap-4">
                 <a href="/tickets" class="bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold transition">🎟 Get Tickets</a>
-                <a href="/sponsors" class="bg-slate-800 border border-slate-700 hover:bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold transition">Become a Sponsor</a>
+                <a href="/call-for-sponsors" class="bg-slate-800 border border-slate-700 hover:bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold transition">Become a Sponsor</a>
             </div>
         </section>
 
@@ -93,7 +125,7 @@ import Layout from '../layouts/Layout.astro';
         </section>
     </main>
 
-<script is:inline>
+    <script is:inline>
         document.addEventListener('DOMContentLoaded', function() {
             const eventDate = new Date("2026-11-03T09:00:00").getTime();
             
@@ -109,7 +141,6 @@ import Layout from '../layouts/Layout.astro';
                 
                 if(el) el.classList.remove('hidden');
                 
-                // Exakte Berechnung
                 const days  = Math.floor(diff / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const mins  = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
@@ -124,7 +155,18 @@ import Layout from '../layouts/Layout.astro';
             }
             
             updateCountdown();
-            setInterval(updateCountdown, 1000); // <- FIX: Aktualisiert jetzt jede Sekunde
+            setInterval(updateCountdown, 1000);
         });
     </script>
 </Layout>
+
+<!-- NEU: CSS für die Ticker-Animation -->
+<style>
+    @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    .animate-scroll {
+        animation: scroll 30s linear infinite;
+    }
+</style>
