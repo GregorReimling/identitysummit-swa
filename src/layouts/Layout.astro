@@ -1,12 +1,18 @@
 ---
-// src/layouts/Layout.astro
 import '../styles/global.css';
 
-const { title = "Cloud Identity Summit 2026" } = Astro.props;
+const { 
+    title = "Cloud Identity Summit 2026",
+    description = "The community conference for cloud identity professionals. Join us on November 3, 2026, in Frankfurt, Germany for deep insights on identity, security, and access management.",
+    image = "/social-share.jpg"
+} = Astro.props;
 
-// URL auslesen und Trailing-Slash entfernen
 const pathname = Astro.url.pathname;
 const currentPath = pathname === '/' ? '/' : pathname.replace(/\/$/, '');
+
+const site = Astro.site || new URL("https://www.identitysummit.cloud");
+const canonicalURL = new URL(pathname, site);
+const socialImageURL = new URL(image, site);
 ---
 
 <!DOCTYPE html>
@@ -14,7 +20,23 @@ const currentPath = pathname === '/' ? '/' : pathname.replace(/\/$/, '');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={socialImageURL} />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={socialImageURL} />
 </head>
 <body class="bg-slate-950 text-slate-200 font-sans antialiased min-h-screen flex flex-col">
 
