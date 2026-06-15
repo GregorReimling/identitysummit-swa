@@ -93,7 +93,7 @@ import Layout from '../layouts/Layout.astro';
         </section>
     </main>
 
-    <script is:inline>
+<script is:inline>
         document.addEventListener('DOMContentLoaded', function() {
             const eventDate = new Date("2026-11-03T09:00:00").getTime();
             
@@ -107,9 +107,9 @@ import Layout from '../layouts/Layout.astro';
                     return;
                 }
                 
-                // Countdown sichtbar machen
                 if(el) el.classList.remove('hidden');
                 
+                // Exakte Berechnung
                 const days  = Math.floor(diff / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const mins  = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
@@ -124,7 +124,7 @@ import Layout from '../layouts/Layout.astro';
             }
             
             updateCountdown();
-            setInterval(updateCountdown, 60000);
+            setInterval(updateCountdown, 1000); // <- FIX: Aktualisiert jetzt jede Sekunde
         });
     </script>
 </Layout>

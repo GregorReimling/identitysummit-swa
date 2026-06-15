@@ -23,7 +23,6 @@ const imgBase = "https://identitysummitfiles.blob.core.windows.net/cis-images";
             <p>We would like to thank our speakers and our partners glueckkanja and yubico, without whom we would not have been able to offer the rich and informative program! We were very happy that we were finally able to meet in person and had a lot of fun together.</p>
         </div>
 
-        <!-- Impressions / Photo Gallery mit Lightbox -->
         <section class="mb-20">
             <h2 class="text-3xl font-bold text-white mb-8 border-b border-slate-800 pb-4">Impressions</h2>
             
@@ -52,44 +51,90 @@ const imgBase = "https://identitysummitfiles.blob.core.windows.net/cis-images";
             </div>
         </section>
 
-        <!-- Agenda & Slides -->
         <section class="mb-20">
-            <h2 class="text-3xl font-bold text-white mb-8 border-b border-slate-800 pb-4">Sessions & Slides</h2>
+            <h2 class="text-3xl font-bold text-white mb-8 border-b border-slate-800 pb-4">Agenda & Speakers</h2>
             
-            <ul class="space-y-4 text-slate-300">
-                <li class="bg-slate-900/50 p-4 rounded-lg border border-slate-800">
-                    <strong class="text-white block mb-1">Using Logic Apps to automate tasks in your AAD</strong>
-                    <span class="text-slate-400 text-sm">Speaker: <a href="https://chris-brumm.com/" target="_blank" class="text-blue-400 hover:underline">Christopher Brumm</a></span>
-                </li>
-                <li class="bg-slate-900/50 p-4 rounded-lg border border-slate-800">
-                    <strong class="text-white block mb-1">AWS IAM - curse and blessing</strong>
-                    <span class="text-slate-400 text-sm">Speaker: <a href="https://cloud-right.com/" target="_blank" class="text-blue-400 hover:underline">David O'Brien</a></span>
-                </li>
-                <li class="bg-slate-900/50 p-4 rounded-lg border border-slate-800">
-                    <strong class="text-white block mb-1">Azure RBAC, access policies and other Azure Myths</strong>
-                    <span class="text-slate-400 text-sm">Speaker: <a href="https://ericberg.de/" target="_blank" class="text-blue-400 hover:underline">Eric Berg</a></span>
-                </li>
-                <li class="bg-slate-900/50 p-4 rounded-lg border border-slate-800">
-                    <strong class="text-white block mb-1">Azure AD Attack Paths</strong>
-                    <span class="text-slate-400 text-sm">Speaker: <a href="https://cloudbrothers.info/" target="_blank" class="text-blue-400 hover:underline">Fabian Bader</a></span>
-                </li>
-                <li class="bg-slate-900/50 p-4 rounded-lg border border-slate-800">
-                    <strong class="text-white block mb-1">Azure AD Authentication Fundamentals</strong>
-                    <span class="text-slate-400 text-sm">Speaker: <a href="https://gotoguy.blog/" target="_blank" class="text-blue-400 hover:underline">Jan Vidar Elven</a></span>
-                </li>
-                <li class="bg-slate-900/50 p-4 rounded-lg border border-slate-800">
-                    <strong class="text-white block mb-1">Azure AD Security Testing with AADInternals</strong>
-                    <span class="text-slate-400 text-sm">Speaker: <a href="https://o365blog.com/" target="_blank" class="text-blue-400 hover:underline">Dr. Nestori Syynimaa</a></span>
-                </li>
-                <li class="bg-slate-900/50 p-4 rounded-lg border border-slate-800">
-                    <strong class="text-white block mb-1">Hands on with Decentralized Identity and Verifiable Credentials</strong>
-                    <span class="text-slate-400 text-sm">Speaker: Stefan van der Wiele</span>
-                </li>
-            </ul>
+            <div class="grid md:grid-cols-2 gap-4">
+                
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition">
+                    <span class="text-blue-400 text-sm font-mono block mb-2">9:30 am - 12:00 pm</span>
+                    <strong class="text-white block mb-1 text-lg">Hands on with decentralised identifiers and verifiable credentials</strong>
+                    <span class="text-slate-400">Stefan van der Wiele</span>
+                </div>
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition">
+                    <span class="text-blue-400 text-sm font-mono block mb-2">9:30 am - 12:00 pm</span>
+                    <strong class="text-white block mb-1 text-lg">Azure AD Security Testing with AADInternals</strong>
+                    <span class="text-slate-400"><a href="https://o365blog.com/" target="_blank" class="text-blue-400 hover:underline">Dr. Nestori Syynimaa</a></span>
+                </div>
+
+                <div class="bg-slate-800/80 p-5 rounded-xl border border-slate-700/50 text-center col-span-full shadow-inner my-2">
+                    <span class="text-slate-400 text-sm font-mono block mb-1">12:00 pm (60 min)</span>
+                    <strong class="text-white text-lg tracking-wide">Lunch and Expo</strong>
+                </div>
+
+                <div class="bg-blue-900/20 p-5 rounded-xl border border-blue-800/50 text-center col-span-full mb-2">
+                    <span class="text-blue-400 text-sm font-mono block mb-1">1:00 pm (10 min)</span>
+                    <strong class="text-white text-lg">Welcome from the AzureBonn Orga Team</strong>
+                </div>
+
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition">
+                    <span class="text-blue-400 text-sm font-mono block mb-2">1:10 pm (50 min)</span>
+                    <strong class="text-white block mb-1 text-lg">Azure AD Authentication Fundamentals</strong>
+                    <span class="text-slate-400"><a href="https://gotoguy.blog/" target="_blank" class="text-blue-400 hover:underline">Jan Vidar Elven</a></span>
+                </div>
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition">
+                    <span class="text-blue-400 text-sm font-mono block mb-2">1:10 pm (50 min)</span>
+                    <strong class="text-white block mb-1 text-lg">Azure RBAC, Access policies and other Azure Myths</strong>
+                    <span class="text-slate-400"><a href="https://ericberg.de/" target="_blank" class="text-blue-400 hover:underline">Eric Berg</a></span>
+                </div>
+
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition">
+                    <span class="text-blue-400 text-sm font-mono block mb-2">2:10 pm (50 min)</span>
+                    <strong class="text-white block mb-1 text-lg">The state of Identity management in AKS</strong>
+                    <span class="text-slate-400">David Frappart</span>
+                </div>
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition">
+                    <span class="text-blue-400 text-sm font-mono block mb-2">2:10 pm (50 min)</span>
+                    <strong class="text-white block mb-1 text-lg">Managed Identity for Hackers and Developers</strong>
+                    <span class="text-slate-400">Sergey Chubarov</span>
+                </div>
+
+                <div class="bg-slate-800/80 p-5 rounded-xl border border-slate-700/50 text-center col-span-full shadow-inner my-2">
+                    <span class="text-slate-400 text-sm font-mono block mb-1">3:00 pm (30 min)</span>
+                    <strong class="text-white text-lg tracking-wide">Coffee Break and Expo</strong>
+                </div>
+
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition">
+                    <span class="text-blue-400 text-sm font-mono block mb-2">3:30 pm (50 min)</span>
+                    <strong class="text-white block mb-1 text-lg">Using Logic Apps to automate tasks in your AAD - and secure your Logic Apps</strong>
+                    <span class="text-slate-400"><a href="https://chris-brumm.com/" target="_blank" class="text-blue-400 hover:underline">Christopher Brumm</a></span>
+                </div>
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition">
+                    <span class="text-blue-400 text-sm font-mono block mb-2">3:30 pm (50 min)</span>
+                    <strong class="text-white block mb-1 text-lg">AWS IAM - curse and blessing. 10 steps to follow to not end in a world of pain.</strong>
+                    <span class="text-slate-400"><a href="https://cloud-right.com/" target="_blank" class="text-blue-400 hover:underline">David O'Brien</a></span>
+                </div>
+
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition">
+                    <span class="text-blue-400 text-sm font-mono block mb-2">4:30 pm (50 min)</span>
+                    <strong class="text-white block mb-1 text-lg">Azure Attack Paths</strong>
+                    <span class="text-slate-400"><a href="https://cloudbrothers.info/" target="_blank" class="text-blue-400 hover:underline">Fabian Bader</a></span>
+                </div>
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800 hover:border-slate-700 transition">
+                    <span class="text-blue-400 text-sm font-mono block mb-2">4:30 pm (50 min)</span>
+                    <strong class="text-white block mb-1 text-lg">Windows Hello for Business Hybrid Access: How Does It Work Under The Covers?</strong>
+                    <span class="text-slate-400">Sander Berkouwer, Raymond Comvalius</span>
+                </div>
+
+                <div class="bg-slate-800/80 p-5 rounded-xl border border-slate-700/50 text-center col-span-full shadow-inner mt-2">
+                    <span class="text-slate-400 text-sm font-mono block mb-1">5:30 pm (60 min)</span>
+                    <strong class="text-white text-lg tracking-wide">Roundtable & Raffle</strong>
+                </div>
+
+            </div>
         </section>
 
     </main>
 
-    <!-- FsLightbox Script für die Galerie -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.3.1/index.min.js" is:inline></script>
 </Layout>
