@@ -25,8 +25,23 @@ import Layout from '../layouts/Layout.astro';
                 <div class="bg-slate-950/50 border border-slate-800 rounded-xl p-6 mt-8">
                     <h3 class="text-lg font-bold text-white mb-2">Want to speak at CIS 2026?</h3>
                     <p class="text-slate-400 text-sm mb-4">Our Call for Speakers will open in a few months. Stay tuned!</p>
-                    </div>
+                    <p class="text-sm text-slate-500 pt-4 border-t border-slate-800">
+                        Questions? Reach out to: <span id="speaker-mail-placeholder" class="font-mono text-blue-400">[Protected Email]</span>
+                    </p>
+                </div>
             </div>
         </div>
     </main>
+
+    <!-- Bot-Schutz Script für die Speaker E-Mail -->
+    <script is:inline>
+        document.addEventListener('DOMContentLoaded', () => {
+            const user = 'speakers';
+            const domain = 'identitysummit.cloud';
+            const element = document.getElementById('speaker-mail-placeholder');
+            if (element) {
+                element.innerHTML = `<a href="mailto:${user}@${domain}" class="hover:underline text-blue-400">${user}@${domain}</a>`;
+            }
+        });
+    </script>
 </Layout>

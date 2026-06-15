@@ -31,6 +31,7 @@ const currentPath = pathname === '/' ? '/' : pathname.replace(/\/$/, '');
                     <a href="/archive" class={currentPath.startsWith('/archive') ? "text-blue-400" : "text-slate-300 hover:text-white transition"}>Archive</a>
                     <a href="/team" class={currentPath === '/team' ? "text-blue-400" : "text-slate-300 hover:text-white transition"}>Team</a>
                     <a href="/sponsors" class={currentPath === '/sponsors' ? "text-blue-400" : "text-slate-300 hover:text-white transition"}>Sponsors</a>
+                    <a href="/venue" class={currentPath === '/venue' ? "text-blue-400" : "text-slate-300 hover:text-white transition"}>Venue</a>
                     <a href="/code-of-conduct" class={currentPath === '/code-of-conduct' ? "text-blue-400" : "text-slate-300 hover:text-white transition"}>CoC</a>
                     <a href="/tickets" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg transition shadow-lg shadow-blue-900/20">🎟 Tickets</a>
                 </div>
