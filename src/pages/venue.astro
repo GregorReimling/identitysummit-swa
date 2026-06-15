@@ -1,0 +1,89 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Venue & Travel | Cloud Identity Summit 2026">
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-16 px-4 overflow-hidden flex-grow text-center">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-2xl h-[400px] bg-gradient-to-b from-blue-900/30 via-blue-900/5 to-transparent blur-3xl pointer-events-none"></div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <div class="inline-block bg-blue-900/30 border border-blue-800/50 rounded-full px-4 py-1.5 mb-6">
+                <span class="text-blue-400 text-sm font-semibold tracking-wide uppercase">Location</span>
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-tight mb-8">
+                Venue & Travel
+            </h1>
+            
+            <p class="text-xl text-slate-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+                Join us right in the heart of Europe. Frankfurt offers excellent connectivity, making it incredibly easy to reach from anywhere in the world.
+            </p>
+        </div>
+    </section>
+
+    <main class="max-w-5xl mx-auto px-4 pb-32 w-full relative z-10">
+        
+        <!-- Main Venue Card -->
+        <div class="bg-slate-900/60 backdrop-blur-xl border border-blue-500/30 rounded-[2rem] p-8 md:p-12 mb-16 shadow-2xl shadow-blue-900/10 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div class="flex flex-col md:flex-row gap-8 items-center relative z-10">
+                <div class="w-full md:w-1/3 aspect-square bg-slate-800/80 rounded-2xl border border-slate-700 flex items-center justify-center text-6xl shadow-inner">
+                    🏢
+                </div>
+                <div class="w-full md:w-2/3">
+                    <h2 class="text-3xl font-bold text-white mb-4">The Venue</h2>
+                    <p class="text-slate-300 text-lg mb-6 leading-relaxed">
+                        We are currently finalizing the contracts for our 2026 venue in Frankfurt. Expect a modern, spacious location with excellent technical equipment, great catering, and plenty of room for networking.
+                    </p>
+                    <div class="bg-slate-950/50 border border-slate-800 rounded-xl p-4 inline-block">
+                        <p class="text-slate-400 text-sm mb-1">City</p>
+                        <p class="text-white font-semibold">Frankfurt am Main, Germany</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Travel & Accommodation Grid -->
+        <div class="grid md:grid-cols-2 gap-8">
+            
+            <!-- Train Travel -->
+            <div class="bg-slate-900/40 border border-slate-800 rounded-2xl p-8 hover:bg-slate-900/60 transition-colors">
+                <div class="text-4xl mb-4">🚄</div>
+                <h3 class="text-xl font-bold text-white mb-3">By Train</h3>
+                <p class="text-slate-400 leading-relaxed text-sm mb-4">
+                    Frankfurt Central Station (Hauptbahnhof) is one of the most important rail hubs in Europe. We are aiming to provide a discounted <strong class="text-slate-200">Deutsche Bahn Event Ticket</strong> for our attendees to ensure an eco-friendly and affordable journey.
+                </p>
+            </div>
+
+            <!-- Plane Travel -->
+            <div class="bg-slate-900/40 border border-slate-800 rounded-2xl p-8 hover:bg-slate-900/60 transition-colors">
+                <div class="text-4xl mb-4">✈️</div>
+                <h3 class="text-xl font-bold text-white mb-3">By Plane</h3>
+                <p class="text-slate-400 leading-relaxed text-sm">
+                    Frankfurt Airport (FRA) is Germany's largest airport with direct flights to almost anywhere in the world. From the airport, it takes only about 15 minutes by suburban train (S-Bahn) to reach the city center.
+                </p>
+            </div>
+
+            <!-- Car & Parking -->
+            <div class="bg-slate-900/40 border border-slate-800 rounded-2xl p-8 hover:bg-slate-900/60 transition-colors">
+                <div class="text-4xl mb-4">🚗</div>
+                <h3 class="text-xl font-bold text-white mb-3">Car & Parking</h3>
+                <p class="text-slate-400 leading-relaxed text-sm">
+                    If you prefer to travel by car, Frankfurt is perfectly connected to the German Autobahn network. Details regarding on-site parking and nearby parking garages will be updated once the venue is announced.
+                </p>
+            </div>
+
+            <!-- Hotels -->
+            <div class="bg-slate-900/40 border border-slate-800 rounded-2xl p-8 hover:bg-slate-900/60 transition-colors">
+                <div class="text-4xl mb-4">🏨</div>
+                <h3 class="text-xl font-bold text-white mb-3">Accommodation</h3>
+                <p class="text-slate-400 leading-relaxed text-sm">
+                    We will organize a contingent of hotel rooms at special rates near the venue. The booking links and promo codes will be published here a few months prior to the conference.
+                </p>
+            </div>
+
+        </div>
+    </main>
+</Layout>
