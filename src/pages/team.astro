@@ -2,34 +2,97 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Team | Cloud Identity Summit">
-    <main class="max-w-4xl mx-auto px-4 py-20 w-full flex-grow">
-        <div class="text-blue-500 text-sm font-bold tracking-wider uppercase mb-3">About Us</div>
-        <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-8">The Team</h1>
+<Layout title="The Team | Cloud Identity Summit 2026">
+    <section class="relative pt-32 pb-16 px-4 overflow-hidden flex-grow text-center">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[400px] bg-gradient-to-b from-blue-900/30 via-cyan-900/10 to-transparent blur-3xl pointer-events-none"></div>
         
-        <p class="text-xl text-slate-300 leading-relaxed mb-16">
-            We from the Azure Meetup Bonn Team are cloud affine speakers who have fun organizing and participating in various community events. Our new project is the Cloud Identity Summit. At this event, we want to offer a platform for people interested in one of our main topics - identity.
-        </p>
-
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6">
-                <h3 class="text-xl font-bold text-white mb-2"><a href="https://www.cloud-architekt.net/" target="_blank" class="hover:text-blue-400 transition">Thomas Naunheim</a></h3>
-                <p class="text-slate-400 text-sm leading-relaxed">
-                    Thomas is our identity professional and has been dealing with the different facets of the Azure Active Directory for a long time. He is also a top speaker and has already given numerous presentations on the various identity features.
-                </p>
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <div class="inline-block bg-cyan-900/30 border border-cyan-800/50 rounded-full px-4 py-1.5 mb-6">
+                <span class="text-cyan-400 text-sm font-semibold tracking-wide uppercase">The Organizers</span>
             </div>
-            <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6">
-                <h3 class="text-xl font-bold text-white mb-2"><a href="https://twitter.com/renedelamotte" target="_blank" class="hover:text-blue-400 transition">René Wasel</a></h3>
-                <p class="text-slate-400 text-sm leading-relaxed">
-                    René is our community professional and can be found at numerous events. He is also part of the organizing team of Office 365 Cologne and the strong support in the background.
-                </p>
-            </div>
-            <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6">
-                <h3 class="text-xl font-bold text-white mb-2"><a href="https://www.reimling.eu" target="_blank" class="hover:text-blue-400 transition">Gregor Reimling</a></h3>
-                <p class="text-slate-400 text-sm leading-relaxed">
-                    Gregor is very busy with Azure projects and shares his knowledge in this area with the community. He can be found at numerous events and is burning for the community.
-                </p>
-            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-tight mb-8">
+                By the Community.<br/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">For the Community.</span>
+            </h1>
+            
+            <p class="text-xl text-slate-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+                The Cloud Identity Summit was born out of a shared passion for cloud security, Entra ID, and architecture. Meet the team working behind the scenes to bring this conference to life.
+            </p>
         </div>
+    </section>
+
+    <main class="max-w-6xl mx-auto px-4 pb-32 w-full relative z-10">
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            
+            <div class="bg-slate-900/60 backdrop-blur-xl border border-slate-800 rounded-3xl p-8 hover:border-blue-500/50 hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden flex flex-col">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl group-hover:bg-blue-500/20 transition-all duration-500"></div>
+                
+                <div class="mb-6 relative z-10">
+                    <img src="/images/team/gregor.jpg" alt="Gregor Reimling" class="w-32 h-32 rounded-full object-cover border-2 border-slate-700 group-hover:border-blue-400 transition-colors mx-auto shadow-lg" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'><rect width=\'100\' height=\'100\' fill=\'%231e293b\'/><text x=\'50\' y=\'50\' font-family=\'Arial\' font-size=\'40\' fill=\'%23475569\' dominant-baseline=\'middle\' text-anchor=\'middle\'>GR</text></svg>'"/>
+                </div>
+                
+                <div class="text-center mb-6 relative z-10 flex-grow">
+                    <h3 class="text-2xl font-bold text-white mb-1">Gregor Reimling</h3>
+                    <p class="text-blue-400 text-sm font-semibold mb-4">Microsoft MVP | Chief Azure Technologist</p>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Gregor is a Microsoft MVP in Azure and Security, and Chief Azure Technologist at adesso SE. He leads technical strategy and implementation for Azure, focusing on enterprise-scale architectures, cloud security, and governance. As a Microsoft Certified Trainer (MCT), he empowers professionals through hands-on training and mentorship worldwide.
+                    </p>
+                </div>
+                
+                <div class="flex justify-center gap-4 relative z-10 pt-4 border-t border-slate-800/50">
+                    <a href="https://sessionize.com/GregorReimling" target="_blank" class="text-slate-500 hover:text-blue-400 transition-colors" title="Sessionize Profile">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm5 7h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-slate-900/60 backdrop-blur-xl border border-slate-800 rounded-3xl p-8 hover:border-blue-500/50 hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden flex flex-col">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl group-hover:bg-blue-500/20 transition-all duration-500"></div>
+                
+                <div class="mb-6 relative z-10">
+                    <img src="/images/team/thomas.jpg" alt="Thomas Naunheim" class="w-32 h-32 rounded-full object-cover border-2 border-slate-700 group-hover:border-blue-400 transition-colors mx-auto shadow-lg" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'><rect width=\'100\' height=\'100\' fill=\'%231e293b\'/><text x=\'50\' y=\'50\' font-family=\'Arial\' font-size=\'40\' fill=\'%23475569\' dominant-baseline=\'middle\' text-anchor=\'middle\'>TN</text></svg>'"/>
+                </div>
+                
+                <div class="text-center mb-6 relative z-10 flex-grow">
+                    <h3 class="text-2xl font-bold text-white mb-1">Thomas Naunheim</h3>
+                    <p class="text-blue-400 text-sm font-semibold mb-4">Microsoft MVP | Cyber Security Architect</p>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Thomas is a Cyber Security Architect at glueckkanja AG and a Microsoft MVP specializing in cloud-native identity and security solutions in Entra ID and Azure. He is a passionate community contributor, blogger at cloud-architekt.net, co-host of the "Cloud Inspires" podcast, and co-author of the Entra ID Attack & Defense Playbook.
+                    </p>
+                </div>
+                
+                <div class="flex justify-center gap-4 relative z-10 pt-4 border-t border-slate-800/50">
+                    <a href="https://sessionize.com/ThomasNaunheim/" target="_blank" class="text-slate-500 hover:text-blue-400 transition-colors" title="Sessionize Profile">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm5 7h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-slate-900/60 backdrop-blur-xl border border-slate-800 rounded-3xl p-8 hover:border-blue-500/50 hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden flex flex-col">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl group-hover:bg-blue-500/20 transition-all duration-500"></div>
+                
+                <div class="mb-6 relative z-10">
+                    <img src="/images/team/rene.jpg" alt="René Wasel" class="w-32 h-32 rounded-full object-cover border-2 border-slate-700 group-hover:border-blue-400 transition-colors mx-auto shadow-lg" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'><rect width=\'100\' height=\'100\' fill=\'%231e293b\'/><text x=\'50\' y=\'50\' font-family=\'Arial\' font-size=\'40\' fill=\'%23475569\' dominant-baseline=\'middle\' text-anchor=\'middle\'>RW</text></svg>'"/>
+                </div>
+                
+                <div class="text-center mb-6 relative z-10 flex-grow">
+                    <h3 class="text-2xl font-bold text-white mb-1">René Wasel</h3>
+                    <p class="text-blue-400 text-sm font-semibold mb-4">Microsoft MVP | M365 Specialist</p>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Working in IT since 2002, René is a Microsoft 365 Specialist and awarded MVP. He has a deep technical focus on the modern workplace cosmos. Beyond his technical expertise, René is a true community driver: He co-hosts the podcast "Daniel und René - M365 im Alltag" and passionately organizes multiple local tech meetups and user groups.
+                    </p>
+                </div>
+                
+                <div class="flex justify-center gap-4 relative z-10 pt-4 border-t border-slate-800/50">
+                    <a href="https://sessionize.com/ReneWasel" target="_blank" class="text-slate-500 hover:text-blue-400 transition-colors" title="Sessionize Profile">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm5 7h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
     </main>
 </Layout>
