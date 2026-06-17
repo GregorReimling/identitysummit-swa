@@ -40,26 +40,38 @@ const socialImageURL = new URL(image, site);
 </head>
 <body class="bg-slate-950 text-slate-200 font-sans antialiased min-h-screen flex flex-col">
 
-    <nav class="sticky top-0 z-50 bg-slate-950/90 backdrop-blur-md border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6">
-            <div class="flex items-center justify-between h-16">
-                <a href="/" class="flex items-center gap-3">
-                    <span class="bg-blue-600 text-white text-xs font-bold px-2.5 py-1 rounded-md">CIS</span>
-                    <span class="font-bold text-white tracking-wide">Cloud Identity Summit</span>
-                </a>
+<nav class="w-full max-w-7xl mx-auto px-4 py-6 flex justify-between items-center relative z-50">
+    <a href="/" class="text-xl font-bold text-white">CIS 2026</a>
+    
+    <!-- Desktop Menü -->
+    <div class="hidden md:flex gap-8 items-center">
+        <a href="/agenda" class="text-slate-300 hover:text-white transition">Agenda</a>
+        <a href="/team" class="text-slate-300 hover:text-white transition">Team</a>
+        <a href="/call-for-sponsors" class="text-slate-300 hover:text-white transition">Sponsors</a>
+        <a href="/tickets" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg transition">Tickets</a>
+    </div>
 
-                <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
-                    <a href="/" class={currentPath === '/' ? "text-blue-400" : "text-slate-300 hover:text-white transition"}>2026</a>
-                    <a href="/archive" class={currentPath.startsWith('/archive') ? "text-blue-400" : "text-slate-300 hover:text-white transition"}>Archive</a>
-                    <a href="/team" class={currentPath === '/team' ? "text-blue-400" : "text-slate-300 hover:text-white transition"}>Team</a>
-                    <a href="/sponsors" class={currentPath === '/sponsors' ? "text-blue-400" : "text-slate-300 hover:text-white transition"}>Sponsors</a>
-                    <a href="/venue" class={currentPath === '/venue' ? "text-blue-400" : "text-slate-300 hover:text-white transition"}>Venue</a>
-                    <a href="/code-of-conduct" class={currentPath === '/code-of-conduct' ? "text-blue-400" : "text-slate-300 hover:text-white transition"}>CoC</a>
-                    <a href="/tickets" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg transition shadow-lg shadow-blue-900/20">🎟 Tickets</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <!-- Mobile Burger Button -->
+    <button id="menu-btn" class="md:hidden text-white p-2">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+    </button>
+</nav>
+
+<!-- Mobile Overlay Menü -->
+<div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-slate-950/95 border-b border-slate-800 p-8 flex flex-col gap-6 text-center z-40">
+    <a href="/agenda" class="text-xl text-white">Agenda</a>
+    <a href="/team" class="text-xl text-white">Team</a>
+    <a href="/call-for-sponsors" class="text-xl text-white">Sponsors</a>
+    <a href="/tickets" class="bg-blue-600 text-white px-6 py-3 rounded-lg">Tickets</a>
+</div>
+
+<script is:inline>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+</script>
 
     <slot />
 
