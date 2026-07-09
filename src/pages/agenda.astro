@@ -1,68 +1,34 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Nav from '../components/nav.astro';
-import Footer from '../components/footer.astro';
+import Layout from '../layouts/Layout.astro';
 ---
 
-<BaseLayout title="Agenda" description="Cloud Identity Summit 2026 – Full Schedule">
-  <Nav />
-  <main class="main">
-    <div class="container">
+<Layout title="Agenda | Cloud Identity Summit">
+    <main class="max-w-3xl mx-auto px-4 py-32 w-full flex-grow text-center">
+        <div class="inline-block bg-blue-900/30 border border-blue-800/50 rounded-full px-4 py-1.5 mb-6">
+            <span class="text-blue-400 text-sm font-semibold tracking-wide uppercase">Schedule</span>
+        </div>
+        
+        <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-8">
+            Agenda 2026
+        </h1>
 
-      <div class="page-header">
-        <div class="page-label">Schedule</div>
-        <h1 class="page-title">Agenda 2026</h1>
-        <p class="page-sub">3. November 2026 · Frankfurt, Germany</p>
-      </div>
-
-      <div class="sessionize-wrap">
-        <script
-          is:inline
-          type="text/javascript"
-          src="https://sessionize.com/api/v2/zypgzww2/view/GridSmart"
-        ></script>
-      </div>
-
-    </div>
-  </main>
-  <Footer />
-</BaseLayout>
+        <div class="sessionize-wrap">
+            <script
+                is:inline
+                type="text/javascript"
+                src="https://sessionize.com/api/v2/zypgzww2/view/GridSmart"
+            ></script>
+        </div>
+    </main>
+</Layout>
 
 <style>
-  .main { padding: 100px 0 80px; }
-  .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-
-  .page-header { margin-bottom: 48px; }
-  .page-label {
-    font-family: var(--font-display); font-size: 11px; font-weight: 700;
-    letter-spacing: 0.18em; text-transform: uppercase;
-    color: #6c8fff; margin-bottom: 12px;
-  }
-  .page-title {
-    font-family: var(--font-display); font-size: clamp(32px, 5vw, 56px);
-    font-weight: 800; color: var(--text-high); margin-bottom: 8px;
-  }
-  .page-sub { font-size: 16px; font-weight: 300; color: var(--text-mid); }
-
   .sessionize-wrap {
     background: var(--bg-card);
     border: 1px solid rgba(120,120,200,0.15);
     border-radius: 16px;
     padding: 32px;
     overflow-x: auto;
+    text-align: left;
   }
-
-  /* Sessionize Widget Dark Mode Overrides */
-  .sessionize-wrap :global(.sz-root) { color: var(--text-high) !important; }
-  .sessionize-wrap :global(.sz-session) {
-    background: var(--bg-raised) !important;
-    border-color: rgba(120,120,200,0.2) !important;
-    border-radius: 8px !important;
-  }
-  .sessionize-wrap :global(.sz-session:hover) {
-    border-color: rgba(108,143,255,0.4) !important;
-  }
-  .sessionize-wrap :global(.sz-session--title) { color: var(--text-high) !important; }
-  .sessionize-wrap :global(.sz-session--speakers) { color: var(--text-mid) !important; }
-  .sessionize-wrap :global(.sz-time-slot) { color: var(--text-low) !important; }
 </style>
