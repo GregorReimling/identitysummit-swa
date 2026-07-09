@@ -1,0 +1,34 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Speaker | Cloud Identity Summit">
+    <main class="max-w-3xl mx-auto px-4 py-32 w-full flex-grow text-center">
+        <div class="inline-block bg-blue-900/30 border border-blue-800/50 rounded-full px-4 py-1.5 mb-6">
+            <span class="text-blue-400 text-sm font-semibold tracking-wide uppercase">Speaker</span>
+        </div>
+        
+        <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-8">
+            Speaker 2026
+        </h1>
+
+        <div class="sessionize-wrap">
+            <script
+                is:inline
+                type="text/javascript"
+                src="https://sessionize.com/api/v2/zypgzww2/view/SpeakerWall"
+            ></script>
+        </div>
+    </main>
+</Layout>
+
+<style>
+  .sessionize-wrap {
+    background: var(--bg-card);
+    border: 1px solid rgba(120,120,200,0.15);
+    border-radius: 16px;
+    padding: 32px;
+    overflow-x: auto;
+    text-align: left;
+  }
+</style>
