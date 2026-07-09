@@ -48,8 +48,12 @@
 ```
 src/
   layouts/
-    BaseLayout.astro        ← Haupt-Layout (HTML Head, Fonts, global.css)
-    Layout.astro            ← Alternatives Layout (von Agenda/Speaker genutzt)
+    BaseLayout.astro        ← Haupt-Layout (HTML Head, Fonts, global.css) – genutzt von index, sponsors etc.
+    Layout.astro            ← Haupt-Layout für Agenda/Speaker/Team etc. – enthält Nav + Footer direkt
+                               Nav ist INLINE in Layout.astro (NICHT in nav.astro Komponente)
+                               Styling: Tailwind CSS (bg-slate-950, text-slate-200 etc.)
+                               Enthält: OG Meta Tags, canonical URL, CIS Logo SVG (/images/cislogo.svg)
+                               Footer ist ausgelagert in Footer.astro Komponente
   components/
     nav.astro               ← Navigation (2 Ebenen, Past Identity Summits Dropdown)
     cityhero.astro          ← Hero mit Skyline-Foto + Countdown

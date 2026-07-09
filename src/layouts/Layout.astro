@@ -33,11 +33,21 @@ const socialImageURL = new URL(image, site);
             <img src="/images/cislogo.svg" alt="Logo" class="h-12 w-auto hover:opacity-80 transition-opacity" />
         </a>
         
-        <div class="hidden md:flex gap-10 items-center">
+<div class="hidden md:flex gap-10 items-center">
             <a href="/agenda" class="text-slate-200 hover:text-white transition text-lg font-medium">Agenda</a>
             <a href="/speaker" class="text-slate-200 hover:text-white transition text-lg font-medium">Speakers</a>
             <a href="/team" class="text-slate-200 hover:text-white transition text-lg font-medium">Team</a>
             <a href="/sponsors" class="text-slate-200 hover:text-white transition text-lg font-medium">Sponsors</a>
+            <div class="relative group">
+                <span class="text-slate-200 hover:text-white transition text-lg font-medium cursor-pointer">Past Summits ▾</span>
+                <div class="absolute top-full left-0 mt-2 hidden group-hover:flex flex-col bg-slate-900 border border-slate-800 rounded-xl p-2 min-w-48 z-50">
+                    {[2025, 2024, 2023, 2022, 2021, 2020].map(year => (
+                        <a href={`/archive/${year}`} class="px-4 py-2 text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg text-sm whitespace-nowrap">
+                            Cloud Identity Summit {year}
+                        </a>
+                    ))}
+                </div>
+            </div>
             <a href="/venue" class="text-slate-200 hover:text-white transition text-lg font-medium">Venue</a>
             <a href="/tickets" class="bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-lg transition text-lg font-semibold">Tickets</a>
         </div>
@@ -47,11 +57,18 @@ const socialImageURL = new URL(image, site);
         </button>
     </nav>
 
-    <div id="mobile-menu" class="hidden md:hidden absolute top-24 left-0 w-full bg-slate-950/95 border-b border-slate-800 p-8 flex flex-col gap-6 text-center z-40">
+<div id="mobile-menu" class="hidden md:hidden absolute top-24 left-0 w-full bg-slate-950/95 border-b border-slate-800 p-8 flex flex-col gap-6 text-center z-40">
         <a href="/agenda" class="text-2xl text-white font-medium">Agenda</a>
+        <a href="/speaker" class="text-2xl text-white font-medium">Speakers</a>
         <a href="/team" class="text-2xl text-white font-medium">Team</a>
         <a href="/sponsors" class="text-2xl text-white font-medium">Sponsors</a>
         <a href="/venue" class="text-2xl text-white font-medium">Venue</a>
+        <div class="flex flex-col gap-3">
+            <span class="text-sm text-slate-500 uppercase tracking-widest">Past Summits</span>
+            {[2025, 2024, 2023, 2022, 2021, 2020].map(year => (
+                <a href={`/archive/${year}`} class="text-lg text-slate-300 font-medium">CIS {year}</a>
+            ))}
+        </div>
         <a href="/tickets" class="bg-blue-600 text-white px-6 py-4 rounded-xl text-xl font-semibold mt-2">Tickets</a>
     </div>
 
