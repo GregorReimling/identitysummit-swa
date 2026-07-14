@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Tickets | Cloud Identity Summit">
+    <!-- Pretix Styles und Scripte laden -->
     <link rel="stylesheet" type="text/css" href="https://pretix.eu/buildclouds/cis2026/widget/v1.css">
     <script type="text/javascript" src="https://pretix.eu/widget/v1.en.js" async></script>
 
@@ -15,24 +16,35 @@ import Layout from '../layouts/Layout.astro';
             Join us in <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">2026</span>
         </h1>
 
+        <!-- Ticket Types Info Grid -->
         <div class="grid md:grid-cols-2 gap-6 mb-12 text-left relative z-10">
-            <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 backdrop-blur-sm">
-                <div class="text-3xl mb-4">🎟️</div>
-                <h3 class="text-xl font-bold text-white mb-2">Regular Admission</h3>
+            <!-- Community Ticket -->
+            <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 backdrop-blur-sm relative overflow-hidden">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="text-3xl">🎟️</div>
+                    <span class="bg-slate-800 text-slate-300 border border-slate-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+                        Available this Friday
+                    </span>
+                </div>
+                
+                <h3 class="text-xl font-bold text-white mb-2">Community Ticket</h3>
                 <p class="text-slate-400 text-sm leading-relaxed mb-4">
                     Welcome to the Cloud Identity Summit! Get full access to all sessions, networking areas, and catering throughout the day.
                 </p>
-                <p class="text-slate-500 text-xs italic">
-                    After completing your order, you will automatically receive an invoice by email.
-                </p>
+                <div class="bg-slate-950/50 p-3 rounded-lg border border-slate-800/50">
+                    <p class="text-slate-300 text-sm font-medium">
+                        ⏱️ Registration opens on Friday, July 17th.
+                    </p>
+                </div>
             </div>
 
+            <!-- Supporter Ticket -->
             <div class="bg-blue-900/10 border border-blue-500/30 rounded-2xl p-6 backdrop-blur-sm relative overflow-hidden group hover:bg-blue-900/20 transition-colors">
                 <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl group-hover:bg-blue-500/20 transition-all"></div>
                 
                 <div class="flex justify-between items-start mb-4 relative z-10">
                     <div class="text-3xl">🤝</div>
-                    <span class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide shadow-lg shadow-blue-900/50">Community Supporter</span>
+                    <span class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide shadow-lg shadow-blue-900/50">Available Now</span>
                 </div>
                 
                 <h3 class="text-xl font-bold text-blue-400 mb-2 relative z-10">Supporter Ticket</h3>
@@ -54,6 +66,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
         </div>
         
+        <!-- Pretix Ticket-Container -->
         <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-4 md:p-8 backdrop-blur-sm text-left">
             <pretix-widget event="https://pretix.eu/buildclouds/cis2026/"></pretix-widget>
             
