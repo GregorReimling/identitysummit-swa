@@ -86,6 +86,43 @@ import Layout from '../layouts/Layout.astro';
 
 
     <main class="max-w-4xl mx-auto px-4 py-20 w-full">
+        <!-- KEYNOTE SPOTLIGHT -->
+<section class="max-w-4xl mx-auto px-4 mb-24">
+    <div class="relative bg-gradient-to-br from-slate-900 via-slate-900 to-blue-950 border border-blue-500/30 rounded-3xl p-8 md:p-12 shadow-2xl overflow-hidden">
+        <!-- Background Glow -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
+        
+        <div class="relative z-10 flex flex-col md:flex-row gap-8 items-center">
+            <!-- Speaker Image Placeholder -->
+            <div class="shrink-0">
+                <div class="w-40 h-40 rounded-2xl bg-slate-800 border-2 border-blue-500/50 overflow-hidden shadow-lg">
+                    <!-- Ersetze durch dein Bild -->
+                    <img src="/images/speakers/eric-woodruff.jpg" alt="Eric Woodruff" class="w-full h-full object-cover" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'><rect width=\'100\' height=\'100\' fill=\'%231e293b\'/><text x=\'50\' y=\'50\' font-family=\'Arial\' font-size=\'40\' fill=\'%23475569\' dominant-baseline=\'middle\' text-anchor=\'middle\'>EW</text></svg>'"/>
+                </div>
+                <div class="mt-4 flex items-center justify-center gap-2 bg-blue-900/30 text-blue-300 text-xs font-bold px-3 py-1 rounded-full border border-blue-500/20">
+                    <span>🇺🇸 Flying in from USA</span>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="flex-grow">
+                <div class="inline-flex items-center gap-2 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4">
+                    <span>★ Keynote Speaker</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">Eric Woodruff</h2>
+                <h3 class="text-xl text-blue-400 font-semibold mb-6 italic">"Identity Security Kindergeburtstag"</h3>
+                
+                <p class="text-slate-300 text-sm leading-relaxed mb-6 line-clamp-4">
+                    You're all invited to the 14th birthday of identity being the "new" security perimeter! And what better way to celebrate than to take a deep look at its slightly strained relationship within cybersecurity! Just like all teenagers, the identity security perimeter is going through a lot of changes...
+                </p>
+                
+                <a href="#agenda" class="text-blue-400 hover:text-white font-semibold transition flex items-center gap-2">
+                    Read more in the agenda →
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
         <section class="mb-24">
             <div class="text-blue-500 text-sm font-bold tracking-wider uppercase mb-3">About the Event</div>
             <h2 class="text-3xl md:text-4xl font-bold text-white mb-8">What is the Cloud Identity Summit?</h2>
