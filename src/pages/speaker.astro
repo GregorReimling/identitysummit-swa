@@ -3,21 +3,57 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Speaker | Cloud Identity Summit">
-    <main class="max-w-3xl mx-auto px-4 py-32 w-full flex-grow text-center">
+    <!-- max-w-4xl für etwas mehr Platz in der Breite der Keynote-Card -->
+    <main class="max-w-4xl mx-auto px-4 py-32 w-full flex-grow text-center">
         <div class="inline-block bg-blue-900/30 border border-blue-800/50 rounded-full px-4 py-1.5 mb-6">
             <span class="text-blue-400 text-sm font-semibold tracking-wide uppercase">Speaker</span>
         </div>
         
-        <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-8">
+        <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-16">
             Speaker 2026
         </h1>
 
-        <div class="sessionize-wrap">
-            <script
-                is:inline
-                type="text/javascript"
-                src="https://sessionize.com/api/v2/zypgzww2/view/SpeakerWall"
-            ></script>
+        <!-- MANUELLER KEYNOTE BEREICH -->
+        <div class="mb-20 text-left">
+            <h2 class="text-2xl font-bold text-slate-300 uppercase tracking-widest text-center mb-8">Keynote</h2>
+            
+            <div class="bg-gradient-to-br from-slate-900 via-slate-900 to-blue-950 border border-blue-500/30 rounded-3xl p-8 md:p-10 shadow-2xl flex flex-col md:flex-row gap-8 items-center relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-cyan-400"></div>
+                
+                <div class="shrink-0 text-center relative z-10">
+                    <!-- Bild-Pfad anpassen -->
+                    <img src="/images/speakers/eric-woodruff.jpg" alt="Eric Woodruff" class="w-40 h-40 rounded-full border-4 border-slate-800 object-cover shadow-xl mx-auto mb-4" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'><rect width=\'100\' height=\'100\' fill=\'%231e293b\'/><text x=\'50\' y=\'50\' font-family=\'Arial\' font-size=\'40\' fill=\'%23475569\' dominant-baseline=\'middle\' text-anchor=\'middle\'>EW</text></svg>'"/>
+                    <div class="inline-flex items-center justify-center gap-2 bg-slate-800 text-blue-300 text-xs font-bold px-3 py-1 rounded-full border border-slate-600">
+                        <span>🇺🇸 Special Guest</span>
+                    </div>
+                </div>
+                
+                <div class="relative z-10 text-center md:text-left">
+                    <div class="inline-flex items-center gap-2 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3">
+                        <span>★ Keynote Speaker</span>
+                    </div>
+                    <h3 class="text-3xl font-bold text-white mb-1">Eric Woodruff</h3>
+                    <p class="text-cyan-400 font-semibold mb-4 italic">"Identity Security Kindergeburtstag"</p>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                        You're all invited to the 14th birthday of identity being the "new" security perimeter! And what better way to celebrate than to take a deep look at its slightly strained relationship within cybersecurity! Just like all teenagers, the identity security perimeter is going through a lot of changes...
+                    </p>
+                    <a href="/agenda" class="inline-flex items-center gap-2 text-sm font-semibold text-white bg-blue-600/20 hover:bg-blue-600/40 border border-blue-500/30 px-4 py-2 rounded-lg transition-colors">
+                        View Keynote in Agenda →
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- AUTOMATISCHER SESSIONIZE BEREICH -->
+        <div>
+            <h2 class="text-2xl font-bold text-slate-300 uppercase tracking-widest text-center mb-8">Featured Speakers</h2>
+            <div class="sessionize-wrap">
+                <script
+                    is:inline
+                    type="text/javascript"
+                    src="https://sessionize.com/api/v2/zypgzww2/view/SpeakerWall"
+                ></script>
+            </div>
         </div>
     </main>
 </Layout>
