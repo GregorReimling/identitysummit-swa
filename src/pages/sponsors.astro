@@ -78,13 +78,29 @@ import Layout from '../layouts/Layout.astro';
                 <div class="h-px bg-gradient-to-l from-transparent to-slate-400 flex-1"></div>
             </div>
             
-            <div class="bg-slate-900/40 border border-slate-800 border-dashed rounded-3xl p-12 text-center">
-                <div class="w-16 h-16 mx-auto bg-slate-800/50 rounded-full flex items-center justify-center mb-4">
-                    <span class="text-2xl">🤝</span>
+            <div class="grid md:grid-cols-2 gap-8 relative z-10">
+                <!-- E.ON Silver Sponsor -->
+                <a href="https://www.eon.com/" target="_blank" class="group relative bg-slate-900/60 backdrop-blur-xl border border-slate-800 rounded-3xl p-8 hover:border-slate-400/50 hover:bg-slate-800/80 transition-all duration-500 hover:-translate-y-2 overflow-hidden flex flex-col h-full">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-slate-400/10 rounded-full blur-3xl group-hover:bg-slate-400/20 transition-all duration-500"></div>
+                    <div class="h-24 mb-8 bg-slate-100 rounded-2xl flex items-center justify-center p-6 border border-slate-200/10">
+                        <img src="/images/sponsors/eon-red-rgb.png" alt="E.ON Logo" class="max-h-full max-w-full object-contain" />
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-slate-300 transition-colors">E.ON</h3>
+                    <p class="text-slate-400 leading-relaxed text-sm flex-grow">E.ON is one of Europe’s largest energy companies, operating energy networks, infrastructure solutions and energy retail businesses. With around 78,000 employees, a 1.6 million kilometre energy distribution network and approximately 47 million customers, E.ON is playing a leading role in shaping a green, digital and decentralized energy future.</p>
+                    <div class="mt-6 flex items-center text-slate-400 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-all -translate-x-4 group-hover:translate-x-0 duration-300">
+                        Visit Website <span class="ml-2">→</span>
+                    </div>
+                </a>
+
+                <!-- Placeholder for future Silver Sponsors -->
+                <div class="bg-slate-900/40 border border-slate-800 border-dashed rounded-3xl p-8 flex flex-col items-center justify-center text-center h-full">
+                    <div class="w-16 h-16 bg-slate-800/50 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-2xl">🤝</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Become a Silver Sponsor</h3>
+                    <p class="text-slate-500 mb-6 text-sm">Secure your spot and support the community alongside E.ON.</p>
+                    <a href="/call-for-sponsors" class="bg-slate-800 hover:bg-slate-700 text-white px-6 py-2.5 rounded-lg font-semibold transition inline-block border border-slate-700">View Sponsorship Packages</a>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-2">Become a Silver Sponsor</h3>
-                <p class="text-slate-500 mb-6">No Silver Sponsors yet. Secure your spot and support the community.</p>
-                <a href="/call-for-sponsors" class="bg-slate-800 hover:bg-slate-700 text-white px-6 py-2.5 rounded-lg font-semibold transition inline-block border border-slate-700">View Sponsorship Packages</a>
             </div>
         </section>
 
