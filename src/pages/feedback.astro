@@ -1,0 +1,25 @@
+---
+const formsUrl = "https://forms.cloud.microsoft/e/43Q8duRmAy";
+---
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content={`0;url=${formsUrl}`} />
+    <link rel="canonical" href={formsUrl} />
+    <title>Redirecting to Feedback Form...</title>
+    <script is:inline define:vars={{ formsUrl }}>
+        window.location.href = formsUrl;
+    </script>
+</head>
+<body class="bg-slate-950 text-slate-300 font-sans flex items-center justify-center min-h-screen">
+    <div class="text-center p-6">
+        <p class="text-lg mb-4">Redirecting to Feedback Form...</p>
+        <p class="text-sm text-slate-500">
+            Falls du nicht automatisch weitergeleitet wirst, 
+            <a href={formsUrl} class="text-blue-400 underline hover:text-blue-300">klicke bitte hier</a>.
+        </p>
+    </div>
+</body>
+</html>
